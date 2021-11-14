@@ -1,0 +1,5 @@
+.header__bottom{
+    width: 100%;
+    height: 100px;
+    background-color: var(--py-silver);
+}

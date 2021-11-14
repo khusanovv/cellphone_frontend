@@ -1,0 +1,51 @@
+.profile__headerLanguage{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 15px;
+    border-radius: var(--py-borderr);
+    background-color: var(--py-yellow);
+    margin: 0px 40px;
+    user-select: none;
+    cursor: pointer;
+    min-width: 100px;
+    width: 150px;
+    white-space: nowrap;
+    height: 40px;
+}
+
+.profile__headerLanguage > img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+.language__collection{
+    position: absolute;
+    bottom: -130px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 3;
+    border-radius: var(--py-borderr);
+}
+
+.language__item{
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+}
+
+.language__item:first-child{
+    border-top-left-radius: var(--py-borderr);
+    border-top-right-radius: var(--py-borderr);
+}
+
+.language__item:last-child{
+    border-bottom-left-radius: var(--py-borderr);
+    border-bottom-right-radius: var(--py-borderr);
+}
+
+.language__item > img{
+    width: 30px;
+    margin-right: 10px;
+}

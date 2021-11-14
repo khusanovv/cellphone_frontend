@@ -1,0 +1,75 @@
+.admin__general{
+    width: 100%;
+    height: calc(100vh - 137px);
+    margin-top: 20px;
+    background-color: var(--py-white);
+    box-shadow: var(--py-boxsh);
+    border-radius: var(--py-borderr);
+    padding: 30px 0px;
+}
+
+.genaral__statistics{
+    width: 95%;
+    margin: 0px auto;
+    height: 170px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.statistics{
+    width: 23%;
+    height: 170px;
+    border-radius: var(--py-borderr);
+    background-color: var(--py-white);
+    box-shadow: var(--py-boxsh);
+}
+
+.statistics__primary{
+    width: 100%;
+    padding: 10px 30px;
+    display: flex;
+}
+
+.statistics__number{
+    font-size: 30px;
+    flex: 1;
+    font-weight: 700;
+}
+
+.statistics__flow{
+    width: 100%;
+    margin: 10px 0px;
+    padding: 0px 30px;
+    height: 50px;
+}
+
+.sts__type{
+    width: 40px;
+    height: 40px;
+    background-color: var(--py-yellow);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sts__type > svg{
+    font-size: 25px;
+}
+
+.statistics__title{
+    display: flex;
+}
+
+.statistics__title > p:first-child{
+    width: 100%;
+    padding: 10px 30px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.statistics__title > p:last-child{
+    display: flex;
+    padding: 10px 30px;
+}

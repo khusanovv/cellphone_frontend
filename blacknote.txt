@@ -1,0 +1,73 @@
+          {/* <button className="options__calltoacts sign-in dark">Login</button>
+                    <button className="options__calltoacts light">Sign In</button> */}
+
+                    /* .options__calltoacts{
+    padding: 5px 20px;
+    margin-right: 30px;
+    border: none;
+    font-size: var(--py-nfsize);
+    border-radius: var(--py-borderr);
+}
+
+.sign-in{
+    margin-left: 15px;
+} */
+
+        {
+          user ? <>
+          {location.pathname.includes("admin") ? (
+            <></>
+          ) : (
+            <>
+              <SubHeader />
+              <Header />
+            </>
+          )}
+          <Switch>
+            {(admin && user) && (
+              <>
+                <Route exact path="/" component={() => <Home api="category/"/>}/>
+                <Route path="/admin" component={AdminPanel} />
+              </>
+            )}
+          </Switch>
+          </> : 
+          <>
+            <Route exact path="/login" component={Login}/>
+            <Route exact path="/signup" component={SignUp}/>
+            <Route exact path="/profile/:userName" component={Profile}/>
+          </>
+        }
+
+
+
+        <Route exact path="/" component={() => <Home api="category/" />} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={SignUp} />
+          <Redirect
+            exact
+            from="/profile/"
+            to={`/profile/${userAuthReducer?.name}`}
+          />
+          {/* <Redirect exact from={location.pathname.length > 6 ? "/admin/*" : "/admin"} to={userAuthReducer?.role === "admin" ? "/admin/general" : "/notfound"} /> */}
+          <Route path="/notfound" component={NotFound}/>
+          {userAuthReducer ? (
+            <>
+              {userAuthReducer?.role !== "admin" ? (
+                  <Route
+                    path="/profile/:userName"
+                    component={() => <Profile profileData={userAuthReducer} />}
+                  />
+              ) : (
+                <>
+                  <Route
+                    path="/profile/:userName"
+                    component={() => <Profile profileData={userAuthReducer} />}
+                  />{" "}
+                  <Route path="/admin" component={AdminPanel} />{" "}
+                </>
+              )}
+            </>
+          ) : (
+            <h1>You are not Member yet please Register or Login</h1>
+          )}

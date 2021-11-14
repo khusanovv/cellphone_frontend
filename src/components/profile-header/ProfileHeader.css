@@ -1,0 +1,178 @@
+.profile__header{
+    width: 100%;
+    height: 70px;
+    border-radius: var(--py-borderr);
+    box-shadow: var(--py-boxsh);
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.profile__headerForm{
+    width: 30%;
+    flex: 1;
+}
+
+.profile__headerSearchbar{
+    width: 90%;
+    height: 43px;
+    background-color: var(--py-yellow);
+    border-radius: var(--py-borderr);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.profile__headerSearchbar > svg{
+    font-size: 20px;
+    transform: rotate(90deg);
+    margin: 0px 20px;
+    position: absolute;
+}
+
+.profile__headerSearch{
+    flex: 1;
+    text-indent: 55px;
+    border: none;
+    height: 43px;
+    outline: none;
+    font-size: 22px;
+    background-color: transparent;
+}
+
+.profile__headerSearch::placeholder{
+    font-size: 19px;
+    color: var(--py-dark);
+}
+
+.profile__headerSearchbar > svg:last-child{
+    position: absolute;
+    right: -10px;
+    font-size: 17px;
+}
+
+.profile__headerCollection{
+    display: flex;
+}
+
+.header__collectionItem{
+    list-style-type: none;
+    margin: 0px 10px;
+}
+
+.header__itemLink{
+    text-decoration: none;
+    font-size: 25px;
+    position: relative;
+}
+
+.header__itemTooltip{
+    display: none;
+}
+
+.header__itemLink:hover .header__itemTooltip{
+    font-size: 12px;
+    padding: 5px 10px;
+    background-color: rgba(0,0,0,0.8);
+    color: var(--py-white);
+    border-radius: var(--py-borderr);
+    position: absolute;
+    bottom: -32px;
+    white-space: nowrap;
+    left: 50%;
+    display: block;
+    transform: translateX(-50%);
+}
+
+.header__itemTooltip::after{
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+	height: 0;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 8px solid rgba(0,0,0,0.8);
+}
+
+.profile__headerDarkmode{
+    width: 70px;
+    height: 30px;
+    border: 1px solid var(--py-borderc);
+    margin-right: 40px;
+    border-radius: var(--sy-borderr);
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.darkmode__circle{
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    color: var(--py-dark);
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: var(--py-yellow);
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.darkmode__circle > svg{
+    fill: var(--py-dark);
+}
+
+.light__mode{
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    color: var(--py-yellow);
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: var(--py-dark);
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.light__mode > svg{
+    fill: var(--py-yellow);
+}
+
+.profile__headerAvatar{
+    width: 45px;
+    height: 45px;
+}
+
+.profile__headerAvatar{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--py-borderr);
+    user-select: none;
+}
+
+.profile__headerUserinfo{
+    padding: 0px 15px;
+    user-select: none;
+}
+
+.headerInfo__username{
+    font-weight: 700;
+    font-size: 15px;
+    padding-bottom: 5px;
+    letter-spacing: -0.5px;
+}
+
+.headerInfo__status{
+    color: var(--sy-ownerc);
+    font-weight: 500;
+}

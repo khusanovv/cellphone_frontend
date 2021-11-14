@@ -1,0 +1,77 @@
+.login{
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    min-height: 100vh;
+    background-color: var(--py-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_container{
+    width: 500px;
+    height: 600px;
+    background-color: var(--py-white);
+    box-shadow: var(--py-boxsh);
+    border-radius: var(--py-borderr);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login__title{
+    font-size: 48px;
+    padding: 40px 0px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    user-select: none;
+}
+
+.login__form{
+    width: 100%;
+    height: auto;
+}
+
+.login__email, .login__password{
+    width: 90%;
+    height: 50px;
+    margin: 0px auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+    background-color: var(--py-hovergr);
+    padding: 0px 20px;
+    border-radius: var(--py-borderr);
+}
+
+.login__email svg, .login__password svg{
+    font-size: 22px;
+    color: var(--py-yellow);
+    cursor: pointer;
+}
+
+.login__email{
+    margin: 0px auto 30px auto;
+}
+
+.login__input{
+    width: 100%;
+    height: 50px;
+    border: none;
+    font-size: var(--py-nfsize);
+    outline: none;
+    background-color: transparent;
+    color: var(--py-yellowde);
+}
+
+.login__input:-webkit-autofill,
+.login__input:-webkit-autofill:hover,
+.login__input:-webkit-autofill:focus,
+.login__input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.login__input::placeholder{
+    user-select: none;
+}

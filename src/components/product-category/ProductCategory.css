@@ -1,0 +1,10 @@
+.product__category{
+    width: 95%;
+    height: auto;
+    margin: 30px auto;
+    min-height: 450px;
+}
+
+.product__wrapper{
+    display: flex;
+}

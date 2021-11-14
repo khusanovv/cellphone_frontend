@@ -1,0 +1,134 @@
+@font-face {
+  font-family: SFthin;
+  src: url('../fonts/FontsFree-Net-SFProDisplay-Thin.ttf');
+}
+
+@font-face {
+  font-family: SFreg;
+  src: url('../fonts/FontsFree-Net-SFProDisplay-Regular.ttf');
+}
+
+@font-face {
+  font-family: SFbold;
+  src: url('../fonts/FontsFree-Net-SFProDisplay-Bold.ttf');
+}
+
+:root{
+  --py-yellow: #FBC100;
+  --py-placeholderc: #fbde7f;
+  --py-black: #000;
+  --py-prodark: #292929;
+  --py-dark: #333333;
+  --py-darkl: #4b4b4b;
+  --py-hovergr: #f2f2f2;
+  --py-silver: #e4e4e4;
+  --py-borderc: #b9b8b8;
+  --sy-dark: #6d6d6d;
+  --py-white: #fff;
+  --py-softc: #f7f7f7;
+  --py-nfsize: 18px;
+  --py-sfsize: 13px;
+  --py-bfsize: 22px;
+  --py-rfamily: SFreg;
+  --py-bfamily: SFbold;
+  --py-tfamily: SFthin;
+  --py-borderr: 10px;
+  --sy-ownerc: #eb3333;
+  --py-success: #209820;
+  --py-danger: #f44141;
+  --py-boxsh: #64646f21 0px 0px 29px 0px;
+  --py-boxshd: #f8d76a34 0px 0px 10px;
+  --sy-boxsh: #64646f3b 0px 0px 33px 0px;
+  --py-btnbox-shadow:#64646f44 0px 0px 17px 0px; 
+  --sy-borderr: 30px;
+  --py-linkc: #67adf3;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--py-rfamily);
+}
+
+.darkmain{
+  background-color: #4b4b4b;
+}
+
+.lightmain{
+  background-color: var(--py-white);
+}
+
+.dark{
+  background-color: var(--py-dark);
+  color: var(--py-white);
+}
+
+.light{
+  background-color: var(--py-white);
+  color: var(--py-dark);
+}
+
+.inputdark > input::placeholder{
+  color: var(--py-placeholderc);
+}
+
+.inputdark > input{
+  color: var(--py-yellow);
+}
+
+.yellowLight{
+  background-color: var(--py-yellow);
+  color: var(--py-dark);
+}
+
+.darkfiller{
+  background-color: var(--py-borderc);
+}
+
+.lightfiller{
+  background-color: var(--py-silver);
+}
+
+.lightshadow{
+  box-shadow: var(--py-boxsh);
+}
+
+.darkshadow{
+  box-shadow: var(--py-boxshd);
+}
+
+.productdark{
+  background-color: var(--py-prodark);
+}
+
+.productlight{
+  background-color: var(--py-white);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.main__container{
+  width: 80%;
+  margin: auto;
+  height: 100%;
+}
+
+.link{
+  text-decoration: none;
+  color: var(--py-black);
+  /* background-color: #acacac; */
+}
+
+.item{
+  list-style-type: none;
+}
+
+.mgr__svg{
+  margin-top: -2px;
+  margin-right: 5px;
+}

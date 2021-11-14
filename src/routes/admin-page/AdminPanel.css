@@ -1,0 +1,14 @@
+.admin__panel{
+    display: flex;
+}
+
+.admin__container{
+    width: calc(100% - 290px);
+    min-height: 95vh;
+   margin: 2.5vh 20px;
+}
+
+.admin__title{
+    padding: 0px 40px 20px 40px;
+    user-select: none;
+}
