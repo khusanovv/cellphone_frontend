@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import { userAuth } from '../../context/actions';
-import { useDispatch } from 'react-redux';
+import React from 'react';
+// import { userAuth } from '../../context/actions';
+// import { useDispatch } from 'react-redux';
 
 function Profile({profileData}) {
    
