@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import axios from "axios";
 import "./DeleteProduct.css";
 import {
   FiX,
@@ -12,6 +11,7 @@ import {
 } from "react-icons/fi";
 import { BsStarHalf } from "react-icons/bs";
 import SmallSpinner from "../spinner/SmallSpinner";
+import axios from "../../api/axios";
 
 function DeleteProduct({
   deleteProductData,
@@ -23,7 +23,7 @@ function DeleteProduct({
   const [loading, setLoading] = useState(false);
   const deleteProduct = async () => {
     await axios
-      .delete(`http://localhost:5000/v2/allproducts/${deleteProductData?._id}`)
+      .delete(`allproducts/${deleteProductData?._id}`)
       .then((deletedProduct) => {
         if (deleteProductData) {
           setLoading(deletedProduct);
@@ -73,7 +73,7 @@ function DeleteProduct({
         <div className="delete__image">
           <img
             src={
-              !changePreview ? deleteProductData?.image[0].url : changePreview
+              !changePreview ? deleteProductData?.image[0]?.url : changePreview
             }
             alt=""
           />

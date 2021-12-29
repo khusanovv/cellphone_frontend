@@ -29,7 +29,7 @@ function AllProducts() {
         )
       )}
       <div className="product__container">
-        {allProducts?.map((product) => (
+        {allProducts && allProducts?.map((product) => (
           <Suspense key={product?._id}  fallback={<ProductSkeleton />}>
             <Product data={product} />
           </Suspense>

@@ -61,7 +61,7 @@ function UserRegistration() {
 
   const makeUser = async (upcomingUserData) => {
     await axios.put(
-      `http://localhost:5000/v2/register/${upcomingUserData?._id}`,
+      `register/${upcomingUserData?._id}`,
       {
         role: "user",
       },
@@ -82,7 +82,7 @@ function UserRegistration() {
 
   const deleteUser = async (upcomingDeletedData) => {
     await axios.delete(
-      `http://localhost:5000/v2/register/${upcomingDeletedData?._id}`
+      `register/${upcomingDeletedData?._id}`
     ).then(deletedUser => console.log(deletedUser))
       .catch(error => console.log(error))
   };
@@ -142,7 +142,7 @@ function UserRegistration() {
             </tr>
           </thead>
           <tbody>
-            {allUsers?.map((user, index) => (
+            {Array(allUsers).isArray && allUsers?.map((user, index) => (
               <>
                 <tr className="regbody__sep"></tr>
                 <tr className="regbody__row">
