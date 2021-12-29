@@ -25,7 +25,9 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp}/>
           <Route path="/admin" component={AdminPanel}/>
-          <PrivateRoute path="/profile" component={Profile} />
+          <PrivateRoute path="/profile" >
+            <Profile profileData={themeState} />
+          </PrivateRoute>
         </Switch>
       </div>
     </Router>
