@@ -58,7 +58,7 @@ function ProductCreator() {
     };
     setLoading(true)
     axios.post("allproducts", requestOptions)
-      .then((response) => response.text())
+      .then((response) => response.data())
       .then((result) => {
         if(result){
           setLoading(false)
@@ -67,6 +67,7 @@ function ProductCreator() {
       })
       .catch((error) => console.log("error", error));
   };
+
   return (
     <div className={`product__creator${!themeState ? " dark" : " light"}`}>
       <h1 className="admin__title">Product Creator</h1>
