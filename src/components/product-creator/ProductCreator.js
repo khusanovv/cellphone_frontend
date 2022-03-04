@@ -50,7 +50,7 @@ function ProductCreator() {
     formdata.append("sale", product.productSale);
     formdata.append("address", product.productAddress);
     formdata.append("productCategory", product.productCategory);
-
+    console.log(formdata);
     var requestOptions = {
       method: "POST",
       body: formdata,
@@ -58,7 +58,6 @@ function ProductCreator() {
     };
     setLoading(true)
     axios.post("allproducts", requestOptions)
-      .then((response) => response.data())
       .then((result) => {
         if(result){
           setLoading(false)
