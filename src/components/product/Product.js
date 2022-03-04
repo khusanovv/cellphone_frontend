@@ -65,8 +65,8 @@ function Product({ data }) {
             </div>
           </div>
           <p className="product__mainDescription">
-            {data?.description.charAt(0).toUpperCase() +
-              data?.description.slice(1)}
+            {data && data.description?.charAt(0).toUpperCase() +
+              data.description?.slice(1)}
           </p>
           <Link
             className="link product__link actual__image"

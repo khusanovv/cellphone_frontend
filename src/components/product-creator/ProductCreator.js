@@ -15,7 +15,6 @@ function ProductCreator() {
     productName: "",
     productCost: "",
     productDescription: "",
-    productImage: "",
     productRatings: 0,
     productSale: 0,
     productAuthor: "",
@@ -35,13 +34,14 @@ function ProductCreator() {
   const MultipleFileChange = (e) => {
     setMultipleFiles(e.target.files);
   };
+  console.log(multipleFileChange)
   const handleSubmit = async (e) => {
     e.preventDefault();
     var formdata = new FormData();
     formdata.append("name", product.productName);
     formdata.append("description", product.productDescription);
     for (let i = 0; i < multipleFileChange.length; i++) {
-      formdata.append("image", multipleFileChange[i]);
+      formdata.append("image", multipleFileChange[i], multipleFileChange[i].name);
     }
     formdata.append("price", product.productCost);
     formdata.append("ratings", "4.5");
@@ -50,22 +50,22 @@ function ProductCreator() {
     formdata.append("sale", product.productSale);
     formdata.append("address", product.productAddress);
     formdata.append("productCategory", product.productCategory);
-    console.log(formdata);
-    var requestOptions = {
-      method: "POST",
-      body: formdata,
-      redirect: "follow",
-    };
-    setLoading(true)
-    axios.post("allproducts", requestOptions)
-      .then((result) => {
-        if(result){
-          setLoading(false)
-          history.push("/admin/allproducts")
-        }
-      })
-      .catch((error) => console.log("error", error));
-  };
+
+
+
+      setLoading(true)
+      axios.post("allproducts", formdata)
+        .then((result) => {
+          if(result){
+            setLoading(false)
+            history.push("/admin/allproducts")
+          }
+          console.log(result);
+        })
+        .catch((error) => console.log("error", error));
+    }
+    console.log(product)
+    
 
   return (
     <div className={`product__creator${!themeState ? " dark" : " light"}`}>
@@ -81,7 +81,7 @@ function ProductCreator() {
               Product Name<span>*</span>:{" "}
             </label>
             <input
-              type="text"
+              type="text"   
               required
               autoComplete="off"
               value={product.productName}
@@ -205,7 +205,7 @@ function ProductCreator() {
                 accept="image/.jpeg, .png, .jpg"
                 capture="camera"
                 className="creator__image"
-                name="productImage"
+                name="images"
                 id="product__image"
                 multiple
                 onChange={(e) => MultipleFileChange(e)}
