@@ -14,7 +14,7 @@ function Login() {
 
     const registerUser = async (e) => {
         e.preventDefault();
-        const response = await fetch("https://shrouded-ocean-24719.herokuapp.com/v2/login", {
+        const response = await fetch("http://localhost:8000/v2/login", {
             method: "POST",
             headers: {
                 'Content-Type': "application/json"
